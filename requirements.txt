@@ -1,2 +1,4 @@
+# python -m venv psicare-env
+
 Django
 django-environ

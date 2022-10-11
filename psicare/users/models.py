@@ -28,3 +28,14 @@ class Teacher(models.Model):
 
     def _str_(self):
         return f"({self.cpf}) - {self.name}"
+    
+class Secretary(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    name = models.CharField(max_length=30, verbose_name="Nome")
+    cpf = models.CharField(max_length=14, verbose_name="CPF")
+    
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return f"({self.cpf}) - {self.name}"

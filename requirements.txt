@@ -3,3 +3,6 @@
 
 Django
 django-environ
+django-authtools
+"django-phonenumber-field[phonenumberslite]"
+django-currentuser

@@ -2,7 +2,7 @@
 # pip install -r .\requirements.txt
 
 Django
-django-environ
-django-authtools
-"django-phonenumber-field[phonenumberslite]"
-django-currentuser
+django-environ # Environment Variables
+django-authtools # Better Base User
+django-phonenumber-field[phonenumberslite] # International Phone Number Field
+django-currentuser # Get Logged User

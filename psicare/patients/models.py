@@ -53,6 +53,7 @@ class Patient(models.Model):
     treatment_ed = models.DateTimeField(null=True, blank=True, verbose_name="Fim do Tratamento")
     discharged = models.BooleanField(blank=True, default=False, verbose_name="Recebeu Alta")
     uni_affiliated = models.BooleanField(blank=True, default=False, verbose_name="Filiado a UNI")
+    is_employee = models.BooleanField(blank=True, default=False, verbose_name="Funcionário")
     
     def __str__(self):
         return self.name    

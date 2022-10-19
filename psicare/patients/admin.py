@@ -12,7 +12,7 @@ class PatientAdmin(admin.ModelAdmin):
     fieldsets = ( # Creation form fields
         ('Informações Pessoais', {'fields': ('name','cpf','address','age','sex','place_of_birth','nationality',
                                             'marital_status','family_wage', 'religion', 'profession',
-                                            'scholar_affiliation','uni_affiliated',)}),
+                                            'scholar_affiliation','uni_affiliated','is_employee',)}),
         
         ('Contato', {'fields': ('email','contact',)}),
         

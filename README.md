@@ -29,7 +29,7 @@
 
           **DEBUG**=True (remove this one for production mode)
 
-- Run initial management commands;
+- Run initial management commands
 
   - On `\psicare-repo\psicare`
     - Create the database Migrations
@@ -39,10 +39,13 @@
     - Collect Static Files
     - `python .\manage.py collectstatic --noinput`
 
-- Create a Super User for testing;
+- Create a Super User for testing
   - On `\psicare-repo\psicare`
-    - ` python .\manage.py createsuperuser`
+    - ` python .\manage.py createsuperuser` 
 
 - Run the project
   - On `\psicare-repo\psicare`
     - ` python .\manage.py runserver`
+- Access the admin panel
+  - Go to http://localhost:8000
+    - Port may differ if you change it on "runserver" command.

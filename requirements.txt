@@ -1,8 +1,9 @@
 # python -m venv psicare-env
+# .\psicare-env\Scripts\activate
 # pip install -r .\requirements.txt
 
-Django
-django-environ # Environment Variables
-django-authtools # Better Base User
-django-phonenumber-field[phonenumberslite] # International Phone Number Field
-django-currentuser # Get Logged User
+Django==3.2.16 # Framework
+django-environ==0.9.0 # Environment Variables
+django-authtools==2.0.0 # Better Base User
+django-phonenumber-field[phonenumberslite]==7.0.0 # International Phone Number Field
+django-currentuser==0.5.3 # Get Logged User

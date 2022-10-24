@@ -37,7 +37,7 @@
     - Run the Migrations
       - `python .\manage.py migrate`
     - Collect Static Files
-    - `python .\manage.py collectstatic --noinput`
+      - `python .\manage.py collectstatic --noinput`
 
 - Create a Super User for testing
   - On `\psicare-repo\psicare`

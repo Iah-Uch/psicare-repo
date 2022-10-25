@@ -33,7 +33,7 @@
 
   - On `\psicare-repo\psicare`
     - Create the database Migrations
-      - `python python .\manage.py makemigrations` 
+      - `python .\manage.py makemigrations` 
     - Run the Migrations
       - `python .\manage.py migrate`
     - Collect Static Files

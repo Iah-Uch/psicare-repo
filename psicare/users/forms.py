@@ -1,7 +1,4 @@
-from django.contrib.auth.forms import UserChangeForm
 from authtools.forms import UserCreationForm
-
-from .models import CustomUser
 
 from django import forms
 from django.contrib.auth import get_user_model
@@ -46,7 +43,7 @@ class GroupAdminForm(forms.ModelForm):
 
 
 class CustomUserCreationForm(UserCreationForm):
-    
+    fields = '__all__'
 
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
@@ -56,3 +53,5 @@ class CustomUserCreationForm(UserCreationForm):
         # password or both password' validation will be triggered.
         self.fields['password1'].widget.attrs.update({'autocomplete': 'new-password'})
         self.fields['password2'].widget.attrs.update({'autocomplete': 'new-password'})
+        
+        self.fields['cpf'].widget.attrs['class'] = "mask-cpf"

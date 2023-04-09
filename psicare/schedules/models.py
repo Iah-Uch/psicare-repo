@@ -3,6 +3,7 @@ from django_currentuser.db.models import CurrentUserField
 
 from patients.models import Patient
 from users.models import Student
+from .validator import date_validator
 
 # Create your models here.
 class Schedule(models.Model):
@@ -17,9 +18,14 @@ class Schedule(models.Model):
                              on_delete=models.PROTECT, 
                              verbose_name="Aluno")
     
-    meeting_date = models.DateTimeField(null=True, blank=True, verbose_name="Agendamento")
+    meeting_date = models.DateTimeField(null=True, blank=True, validators=[date_validator], verbose_name="Agendamento")
     
     finished = models.BooleanField(blank=True, default=False, verbose_name="Finalizada")
+    
+    
+    def __str__(self):
+        return f'Agendamento: {str(self.patient).upper()} - {str(self.student).upper()}'
+    
     
     class Meta:
         verbose_name='Agendamento'

@@ -38,6 +38,8 @@
       - `python .\manage.py migrate`
     - Collect Static Files
       - `python .\manage.py collectstatic --noinput`
+    - Load the theme
+      - `python .\manage.py loaddata`
 
 - Create a Super User for testing
   - On `\psicare-repo\psicare`

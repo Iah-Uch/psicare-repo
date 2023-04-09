@@ -24,9 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT =BASE_DIR /'media'
 MEDIA_URL = '/media/'
 
+FIXTURE_DIRS = (
+   os.path.join(BASE_DIR, 'fixtures'),
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -47,6 +50,8 @@ CSRF_COOKIE_SECURE = True
 INSTALLED_APPS = [
     "authtools",
     "phonenumber_field",
+    "admin_interface",
+    "colorfield",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -56,8 +61,15 @@ INSTALLED_APPS = [
     "users",
     "patients",
     "schedules",
-    
+    "report",
+    "ckeditor",
+    "cpf_field",
+    "django_countries"
+   
 ]
+
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -126,12 +138,19 @@ AUTH_USER_MODEL = 'users.CustomUser'
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 LANGUAGE_CODE = "pt-br"
+TIME_ZONE = 'America/Sao_Paulo'
 
-TIME_ZONE = 'Etc/GMT+3'
-
+DATE_INPUT_FORMATS = ['%d/%m/%Y']
+TIME_INPUT_FORMATS = ['%H:%M:%S']
 USE_I18N = True
-
 USE_TZ = True
+
+
+COUNTRIES_FIRST = ["br"]
+PHONENUMBER_DB_FORMAT = 'NATIONAL'
+PHONENUMBER_DEFAULT_REGION = 'BR'
+
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

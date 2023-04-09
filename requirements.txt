@@ -7,3 +7,9 @@ django-environ==0.9.0 # Environment Variables
 django-authtools==2.0.0 # Better Base User
 django-phonenumber-field[phonenumberslite]==7.0.0 # International Phone Number Field
 django-currentuser==0.5.3 # Get Logged User
+django-ckeditor==6.5.1 # Serves to enable the model
+django-countries[pyuca] # Nationality
+django-admin-interface==0.23.0 # Personalize the admin interface
+django-cpf==0.1.0
+
+# https://github.com/RobinHerbots/Inputmask (saved for future reference)

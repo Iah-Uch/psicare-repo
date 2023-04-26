@@ -2,7 +2,7 @@
 # .\psicare-env\Scripts\activate
 # pip install -r .\requirements.txt
 
-Django==3.2.16 # Framework
+Django==3.2.18 # Framework
 django-environ==0.9.0 # Environment Variables
 django-authtools==2.0.0 # Better Base User
 django-phonenumber-field[phonenumberslite]==7.0.0 # International Phone Number Field

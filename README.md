@@ -1,4 +1,9 @@
 # Psicare
+Appointment and patient report manager for a universitary psychology clinic
+
+
+
+
 ## Installation
 
 - Clone or [download](https://github.com/Iah-Uch/psicare/archive/refs/heads/main.zip) this repository;
